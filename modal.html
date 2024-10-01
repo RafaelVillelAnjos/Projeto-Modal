@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modal.css">
+    <!-- NÃO ESQUECE DESSE defer!!! -->
+    <!-- defer faz com que o arquivo js carregue após o html, por algum motivo sem ele não funciona -->
+    <script src="modal.js" defer></script>
+</head>
+<body>
+    <h1>Modal Legal</h1>
+    <button id="Abrir-Modal">Abrir</button>
+
+    <!-- Vai fazer o fundo ficar escuro,com o CSS, dando destaque ao modal -->
+    <div id="fade" class="esconder"></div>
+
+    <!-- Modal em si -->
+    <div id="modal" class="esconder">
+
+        <!-- Cabeçalho do modal -->
+        <div class="Cabeçalho-Modal">
+            <h2>Modals: O que são?</h2>
+            <button id="Fechar-Modal">X</button>
+        </div>
+
+        <!-- Corpo do modal -->
+        <div class="Corpo-Modal">
+            <p>Modal é uma janela que exibe um conteúdo adicional em uma camada 
+            acima da página atual, com uma sobreposição de superfície cobrindo a
+            página e tornando-a temporariamente inacessível.</p>
+
+            <p class="VaiCanva">Para saber mais clique <a href="https://www.canva.com/design/DAGSPk4vmBc/qVuuvdJT60kN7L3WAFemsA/edit?utm_content=DAGSPk4vmBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">AQUI</a></p>
+            
+        </div>
+    </div>
+</body>
+</html>

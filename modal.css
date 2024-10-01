@@ -1,0 +1,122 @@
+/* Pros elementos não ficarem vazando de suas bordas */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+p{
+    text-justify: justify;
+}
+
+#Abrir-Modal{
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px black solid;
+    width: 60px;
+    height: 22px;
+    font-size: 80%;
+    transition: 0.5s;
+}
+
+#Abrir-Modal:hover{
+    background-color: #0165d1;
+    color: #e6e6e6;
+}
+
+#fade, #modal{
+    transition: 0.2s;
+    opacity: 1;
+    /* Faz com que só dê para clicar no fade e no botão de fechar quando a opacidade deles for 1, ou seja, quando estiverem aparecendo */
+    pointer-events: all; 
+}
+
+/* Fazendo o fade funcionar. Quando o modal aparecer o fundo vai ficar escuro, dando destaque para o modal blá blá blá... */
+#fade{
+    position: fixed; /* Faz com que o fade siga o scroll da tela */
+
+    /* Esse top e left prendem ele no canto da tela */
+    top: 0;
+    left: 0;  
+
+    /* Esses dois fazem com que ele fique do tamanho da tela */
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    z-index: 5; /* Faz com que o fade fique por cima dos elementos */
+}
+
+#modal{
+    position: fixed;
+    z-index: 10; /* Pro modal ficar na frente de tudo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 700px;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.Cabeçalho-Modal{
+    display: flex;
+    background-color: orange;
+    margin: 0;
+    padding-left: 10px;
+    height: 50px;
+    align-items: center;
+    border: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: -10px;
+}
+
+.Corpo-Modal{
+    justify-content: justify;
+    text-align: justify;
+    align-items: center;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.VaiCanva{
+    text-align: center;
+}
+
+h2{
+    margin-right: 420px;
+}
+
+#Fechar-Modal{
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    border: 1px black solid;
+    height: 20px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+#Fechar-Modal:hover{
+    background-color: rgb(180, 2, 2);
+    color: #e6e6e6;
+}
+
+#fade.esconder, #modal.esconder{
+    opacity: 0;
+    /* Faz com que não dê para clicar no fade ou no botão de fechar quando eles estiverem escondidos */
+    pointer-events: none;   
+}
